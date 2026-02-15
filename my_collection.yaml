@@ -16,11 +16,11 @@ collection:
       description: ""
     children:
       - url: http://localhost:8080/medicos
-        name: cadastro
+        name: Cadastro de Médico
         meta:
           id: req_b7e45fd693b64b50ae9842c0845016e0
           created: 1770580023283
-          modified: 1770594053423
+          modified: 1771189532586
           isPrivate: false
           description: ""
           sortKey: -1770580027962
@@ -29,8 +29,8 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"nome": "Karolina Alencar",
-            	"email": "karolina.alencar@voll.med",
+            	"nome": "teste teste",
+            	"email": "teste.teste@voll.med",
             	"telefone":"4512-9875",
             	"crm": "88946",
             	"especialidade": "ORTOPEDIA",
@@ -59,16 +59,71 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/medicos
-        name: listar
+      - url: http://localhost:8080/medicos?size=500&sort=id,desc
+        name: Listagem de Médico
         meta:
           id: req_6c5cc8ed85e940b39c2160a6829bb973
           created: 1770596286499
-          modified: 1770596301724
+          modified: 1771189858163
           isPrivate: false
           description: ""
           sortKey: -1770596286499
         method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/medicos
+        name: Atualizar Médico
+        meta:
+          id: req_d1312f38bfe948debbc8b11e707b43b5
+          created: 1771189172496
+          modified: 1771189222696
+          isPrivate: false
+          description: ""
+          sortKey: -1771189172496
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 15,
+            	"nome": "Aline Rodrigues Pinto - Atualizado"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/medicos/19
+        name: Excluir Médico
+        meta:
+          id: req_7cdc82c520b94eaeb154b44f15b47022
+          created: 1771189612685
+          modified: 1771189938659
+          isPrivate: false
+          description: ""
+          sortKey: -1771189612685
+        method: DELETE
         headers:
           - name: User-Agent
             value: insomnia/12.3.1
@@ -91,11 +146,11 @@ collection:
       description: ""
     children:
       - url: http://localhost:8080/pacientes
-        name: cadastro
+        name: Cadastro de Paciente
         meta:
           id: req_69840ec44bcd4df7a3d76f808d77b9d4
           created: 1770579938204
-          modified: 1770596057273
+          modified: 1771189599725
           isPrivate: false
           description: ""
           sortKey: -1770579938204
@@ -121,6 +176,29 @@ collection:
         headers:
           - name: Content-Type
             value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/pacientes
+        name: Listagem de Paciente
+        meta:
+          id: req_214fc069398a44cdb73575ba84155d06
+          created: 1771185016485
+          modified: 1771189609523
+          isPrivate: false
+          description: ""
+          sortKey: -1771185016485
+        method: GET
+        headers:
           - name: User-Agent
             value: insomnia/12.3.1
             description: ""
