@@ -1,0 +1,148 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Requisições
+meta:
+  id: wrk_75b4554660ea418e96c6ee30bec99ec2
+  created: 1770579907298
+  modified: 1770579907298
+  description: ""
+collection:
+  - name: Medico
+    meta:
+      id: fld_997e6fa52d4a4eaf95cd9503655c9e8f
+      created: 1770579918818
+      modified: 1770579930062
+      sortKey: -1770579918818
+      description: ""
+    children:
+      - url: http://localhost:8080/medicos
+        name: cadastro
+        meta:
+          id: req_b7e45fd693b64b50ae9842c0845016e0
+          created: 1770580023283
+          modified: 1770594053423
+          isPrivate: false
+          description: ""
+          sortKey: -1770580027962
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Karolina Alencar",
+            	"email": "karolina.alencar@voll.med",
+            	"telefone":"4512-9875",
+            	"crm": "88946",
+            	"especialidade": "ORTOPEDIA",
+            	"endereco": {
+            		"complemento": "CASA",
+            		"logradouro": "rua 1",
+            		"bairro": "bairro",
+            		"cep": "12345678",
+            		"cidade": "Brasilia",
+            		"uf": "DF",
+            		"numero": "1"
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/medicos
+        name: listar
+        meta:
+          id: req_6c5cc8ed85e940b39c2160a6829bb973
+          created: 1770596286499
+          modified: 1770596301724
+          isPrivate: false
+          description: ""
+          sortKey: -1770596286499
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Paciente
+    meta:
+      id: fld_80e2f894bca34e97b7225849dd19910c
+      created: 1770579935675
+      modified: 1770579935675
+      sortKey: -1770579935675
+      description: ""
+    children:
+      - url: http://localhost:8080/pacientes
+        name: cadastro
+        meta:
+          id: req_69840ec44bcd4df7a3d76f808d77b9d4
+          created: 1770579938204
+          modified: 1770596057273
+          isPrivate: false
+          description: ""
+          sortKey: -1770579938204
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Margarete Pedroza",
+            	"email": "margarete.pedroza@voll.med",
+            	"telefone": "(11) 9fds5af560-5544",
+            	"cpf": "519.264.097-66",
+            	"endereco": {
+            		"complemento": "CASA",
+            		"logradouro": "rua 1",
+            		"bairro": "bairro",
+            		"cep": "12345678",
+            		"cidade": "Brasilia",
+            		"uf": "DF",
+            		"numero": "1"
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_13409fc224d1aafdf074262f8b6aaafe70c2edb6
+    created: 1770579907303
+    modified: 1770579907303
+environments:
+  name: Base Environment
+  meta:
+    id: env_13409fc224d1aafdf074262f8b6aaafe70c2edb6
+    created: 1770579907301
+    modified: 1770579907301
+    isPrivate: false
