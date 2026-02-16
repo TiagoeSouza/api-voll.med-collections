@@ -20,10 +20,10 @@ collection:
         meta:
           id: req_b7e45fd693b64b50ae9842c0845016e0
           created: 1770580023283
-          modified: 1771189532586
+          modified: 1771253740703
           isPrivate: false
           description: ""
-          sortKey: -1770580027962
+          sortKey: -1771189612785
         method: POST
         body:
           mimeType: application/json
@@ -64,7 +64,7 @@ collection:
         meta:
           id: req_6c5cc8ed85e940b39c2160a6829bb973
           created: 1770596286499
-          modified: 1771189858163
+          modified: 1771250479506
           isPrivate: false
           description: ""
           sortKey: -1770596286499
@@ -114,16 +114,39 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/medicos/19
+      - url: http://localhost:8080/medicos/18
         name: Excluir Médico
         meta:
           id: req_7cdc82c520b94eaeb154b44f15b47022
           created: 1771189612685
-          modified: 1771189938659
+          modified: 1771253742323
           isPrivate: false
           description: ""
-          sortKey: -1771189612685
+          sortKey: -1770892729497.5
         method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/medicos/0?size=500&sort=id,desc
+        name: Listagem de Médico - Status
+        meta:
+          id: req_bcc1e94be8f749dab421f1a46a35bce0
+          created: 1771249257667
+          modified: 1771250138548
+          isPrivate: false
+          description: ""
+          sortKey: -1770588157230.5
+        method: GET
         headers:
           - name: User-Agent
             value: insomnia/12.3.1
@@ -150,10 +173,10 @@ collection:
         meta:
           id: req_69840ec44bcd4df7a3d76f808d77b9d4
           created: 1770579938204
-          modified: 1771189599725
+          modified: 1771253733887
           isPrivate: false
           description: ""
-          sortKey: -1770579938204
+          sortKey: -1771037833988.5
         method: POST
         body:
           mimeType: application/json
@@ -193,11 +216,89 @@ collection:
         meta:
           id: req_214fc069398a44cdb73575ba84155d06
           created: 1771185016485
-          modified: 1771189609523
+          modified: 1771253809677
           isPrivate: false
           description: ""
-          sortKey: -1771185016485
+          sortKey: -1770964242740.25
         method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/pacientes/0
+        name: Listagem de Paciente - Status
+        meta:
+          id: req_93bb0af465b54d778459727811e13722
+          created: 1771250594218
+          modified: 1771255781662
+          isPrivate: false
+          description: ""
+          sortKey: -1770890651492
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/pacientes
+        name: Atualizar Paciente
+        meta:
+          id: req_abeecf5d213f4caeb88179358fafe0ac
+          created: 1771253756616
+          modified: 1771253844401
+          isPrivate: false
+          description: ""
+          sortKey: -1771001038364.375
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 3,
+            	"nome": "Karolina Alencar Gonçalves Esteves - Atualizado"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/pacientes/3
+        name: Excluir Paciente
+        meta:
+          id: req_ca5b0cca7a1a4529abb347f2fe4d1c91
+          created: 1771255213805
+          modified: 1771255778313
+          isPrivate: false
+          description: ""
+          sortKey: -1770982640552.3125
+        method: DELETE
         headers:
           - name: User-Agent
             value: insomnia/12.3.1
