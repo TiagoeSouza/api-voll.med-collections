@@ -7,12 +7,12 @@ meta:
   modified: 1770579907298
   description: ""
 collection:
-  - name: Medico
+  - name: Médico
     meta:
       id: fld_997e6fa52d4a4eaf95cd9503655c9e8f
       created: 1770579918818
-      modified: 1770579930062
-      sortKey: -1770579918818
+      modified: 1771692139731
+      sortKey: -1770579931460.75
       description: ""
     children:
       - url: http://localhost:8080/medicos
@@ -20,7 +20,7 @@ collection:
         meta:
           id: req_b7e45fd693b64b50ae9842c0845016e0
           created: 1770580023283
-          modified: 1771253740703
+          modified: 1771966487920
           isPrivate: false
           description: ""
           sortKey: -1771189612785
@@ -28,20 +28,20 @@ collection:
         body:
           mimeType: application/json
           text: |-
-            {
-            	"nome": "teste teste",
-            	"email": "teste.teste@voll.med",
-            	"telefone":"4512-9875",
-            	"crm": "88946",
-            	"especialidade": "ORTOPEDIA",
+            {	
+            	"nome":"Médico Test - Controller",
+            	"email":"medico.teste@controller.com",
+            	"telefone":"11985156678",
+            	"crm": "123456",
+            	"especialidade": "GERAL",
             	"endereco": {
             		"complemento": "CASA",
-            		"logradouro": "rua 1",
-            		"bairro": "bairro",
-            		"cep": "12345678",
-            		"cidade": "Brasilia",
-            		"uf": "DF",
-            		"numero": "1"
+            		"logradouro": "Rua Dos Bobos",
+            		"bairro": "Sem numero",
+            		"cep": "00068001",
+            		"cidade": "Perdida",
+            		"uf": "SP",
+            		"numero": "0"
             	}
             }
         headers:
@@ -51,6 +51,13 @@ collection:
             value: insomnia/12.3.1
             description: ""
             disabled: false
+          - name: Accept-Language
+            value: pr-br
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aWFnby5zb3V6YUBtZWQudm9sbC5jb20iLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzcxOTczMzQ1fQ.MbigYbmnqB-i0a5VBbiZ0qqHBx647n00PxPAToYZgX0
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -59,12 +66,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/medicos?size=500&sort=id,desc
+      - url: http://localhost:8080/medicos?size=500&sort=id,desc&ativo=1
         name: Listagem de Médico
         meta:
           id: req_6c5cc8ed85e940b39c2160a6829bb973
           created: 1770596286499
-          modified: 1771250479506
+          modified: 1771441822349
           isPrivate: false
           description: ""
           sortKey: -1770596286499
@@ -74,6 +81,10 @@ collection:
             value: insomnia/12.3.1
             description: ""
             disabled: false
+        authentication:
+          type: bearer
+          disabled: false
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aWFnby5zb3V6YUBtZWQudm9sbC5jb20iLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzcxNDQ4NzYxfQ.DAUeM2sclYrza0EqmBnY6_Sb0mH5aSPbMqEn3JY3NJc
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -87,7 +98,7 @@ collection:
         meta:
           id: req_d1312f38bfe948debbc8b11e707b43b5
           created: 1771189172496
-          modified: 1771189222696
+          modified: 1771269843349
           isPrivate: false
           description: ""
           sortKey: -1771189172496
@@ -119,7 +130,7 @@ collection:
         meta:
           id: req_7cdc82c520b94eaeb154b44f15b47022
           created: 1771189612685
-          modified: 1771253742323
+          modified: 1771263857990
           isPrivate: false
           description: ""
           sortKey: -1770892729497.5
@@ -137,15 +148,15 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/medicos/0?size=500&sort=id,desc
-        name: Listagem de Médico - Status
+      - url: http://localhost:8080/medicos/10
+        name: Detalhe de Médico
         meta:
-          id: req_bcc1e94be8f749dab421f1a46a35bce0
-          created: 1771249257667
-          modified: 1771250138548
+          id: req_69b7fd16712c42bbaab8735df81b1588
+          created: 1771270195440
+          modified: 1771351231563
           isPrivate: false
           description: ""
-          sortKey: -1770588157230.5
+          sortKey: -1770552636284.75
         method: GET
         headers:
           - name: User-Agent
@@ -173,7 +184,7 @@ collection:
         meta:
           id: req_69840ec44bcd4df7a3d76f808d77b9d4
           created: 1770579938204
-          modified: 1771253733887
+          modified: 1771272537307
           isPrivate: false
           description: ""
           sortKey: -1771037833988.5
@@ -182,7 +193,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"nome": "Margarete Pedroza",
+            	"nome": "Margarete Pedroza teste",
             	"email": "margarete.pedroza@voll.med",
             	"telefone": "(11) 9fds5af560-5544",
             	"cpf": "519.264.097-66",
@@ -211,38 +222,15 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/pacientes
+      - url: http://localhost:8080/pacientes?size=500&sort=id,desc&ativo=0
         name: Listagem de Paciente
         meta:
           id: req_214fc069398a44cdb73575ba84155d06
           created: 1771185016485
-          modified: 1771253809677
+          modified: 1771271509436
           isPrivate: false
           description: ""
           sortKey: -1770964242740.25
-        method: GET
-        headers:
-          - name: User-Agent
-            value: insomnia/12.3.1
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:8080/pacientes/0
-        name: Listagem de Paciente - Status
-        meta:
-          id: req_93bb0af465b54d778459727811e13722
-          created: 1771250594218
-          modified: 1771255781662
-          isPrivate: false
-          description: ""
-          sortKey: -1770890651492
         method: GET
         headers:
           - name: User-Agent
@@ -294,11 +282,37 @@ collection:
         meta:
           id: req_ca5b0cca7a1a4529abb347f2fe4d1c91
           created: 1771255213805
-          modified: 1771255778313
+          modified: 1771447668457
           isPrivate: false
           description: ""
           sortKey: -1770982640552.3125
         method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aWFnby5zb3V6YUBtZWQudm9sbC5jb20iLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzcxNDU0ODYxfQ.YZnLcy9DU-8BTu3fbmkXzUVbBkVd2nuJoKiB_PzxPKw
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/pacientes/22
+        name: Detalhe de Paciente
+        meta:
+          id: req_a472d4434136425892088d93707efed6
+          created: 1771272486495
+          modified: 1771272644614
+          isPrivate: false
+          description: ""
+          sortKey: -1770964242640.25
+        method: GET
         headers:
           - name: User-Agent
             value: insomnia/12.3.1
@@ -312,12 +326,176 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: Autenticação
+    meta:
+      id: fld_f039c7d3bfe0422e868252b3e537184f
+      created: 1771352497247
+      modified: 1771352497247
+      sortKey: -1771352497247
+      description: ""
+    children:
+      - url: http://localhost:8080/login
+        name: Login
+        meta:
+          id: req_5a7e44df5de14550a56bcd29346eb168
+          created: 1771421557920
+          modified: 1772142899495
+          isPrivate: false
+          description: ""
+          sortKey: -1771421561924
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"login": "tiago.souza@voll.med.com",
+            	"senha": "123456"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Consultas
+    meta:
+      id: fld_37d19a1bc33347dbbe60a26d366696de
+      created: 1771531510678
+      modified: 1771531667397
+      sortKey: -1770579927246.5
+      description: ""
+    children:
+      - url: http://localhost:8080/consultas
+        name: Agendar
+        meta:
+          id: req_a705c62b4c71401daabbc453aec2161c
+          created: 1771531617629
+          modified: 1772143106923
+          isPrivate: false
+          description: ""
+          sortKey: -1771531620389
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"idMedico":7,
+            	"idPaciente":10,
+            	"data":"2026-02-28T13:30"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: Accept-Language
+            value: pr-br
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aWFnby5zb3V6YUB2b2xsLm1lZC5jb20iLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzcyMTUwMTc3fQ.GRtHuT1lbLH52JCKftBhKIfPsHK_fs6jDVXhxw6yhC4
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/consultas
+        name: Cancelar
+        meta:
+          id: req_7226bdae878940728cb476ac9fa5793c
+          created: 1771603357504
+          modified: 1771603361315
+          isPrivate: false
+          description: ""
+          sortKey: -1771476591156.5
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"idMedico": 1,
+            	"idPaciente": 1,
+            		"data": "2026-02-19T18:00:00"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: Accept-Language
+            value: pr-br
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aWFnby5zb3V6YUBtZWQudm9sbC5jb20iLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzcxNTM5MTE1fQ.X-qB6JQRbaEktMJAsrxmRAy8cpOb0HmFx5l5epGBsKg
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/consultas/10
+        name: Consulta por Paciente
+        meta:
+          id: req_350549a94eb04003b18531f7190bef78
+          created: 1772144258737
+          modified: 1772144333611
+          isPrivate: false
+          description: ""
+          sortKey: -1771476591056.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          disabled: false
+          token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aWFnby5zb3V6YUB2b2xsLm1lZC5jb20iLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJpZCI6MSwiZXhwIjoxNzcyMTUxNDg5fQ.DoaGG1TG0y9pR2AnQ87ztcRt_mCcVXfTfZfTfRWnr6U
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_13409fc224d1aafdf074262f8b6aaafe70c2edb6
     created: 1770579907303
-    modified: 1770579907303
+    modified: 1771352470691
+  cookies:
+    - id: 12384103-6d81-4f24-96ab-5ed2ab2a5bbf
+      key: JSESSIONID
+      value: 65DBC98B6389037D3AD2F0D4E7142E8A
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
 environments:
   name: Base Environment
   meta:
